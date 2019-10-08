@@ -1,0 +1,8 @@
+.listContent {
+  max-width: 80%;
+}
+
+.itemDone label{
+  color: #888 !important;
+  text-decoration: line-through;
+}
