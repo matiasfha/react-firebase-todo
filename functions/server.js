@@ -4,11 +4,11 @@ const cors = require("cors");
 const Multer = require("multer");
 const fileMiddleware = require("express-multipart-file-parser");
 const admin = require("firebase-admin");
-// const serviceAccount = require("../todoapp-service-account.json");
+const serviceAccount = require("../todoapp-service-account.json"); //Sharing this only for the test
 
 admin.initializeApp({
-  // credential: admin.credential.cert(serviceAccount),
-  credential: admin.credential.applicationDefault(),
+  credential: admin.credential.cert(serviceAccount),
+  // credential: admin.credential.applicationDefault(),
   databaseURL: "https://todoapp-4f92c.firebaseio.com",
   storageBucket: "gs://todoapp-4f92c.appspot.com/"
 });
