@@ -1,3 +1,11 @@
+## TODO
+This is a firebase project and firebase/firestore doesn't implement full text search so its not
+possible to filter the todo objects by the descrption field (at least not by querying the data). To
+do this algolia can be implemented. So the TODO for the project is to implement algolia usage to
+perform the full text search on the description field to allow the user to filter the list by
+description text.
+
+
 ## Installation 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
