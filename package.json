@@ -14,6 +14,7 @@
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "semantic-ui-react": "0.88.1",
+    "serve": "11.2.0",
     "uuid": "3.3.3"
   },
   "devDependencies": {
@@ -29,7 +30,8 @@
     "eject": "react-scripts eject",
     "deploy:functions": "firebase deploy --only functions",
     "start:server": "npm run serve",
-    "serve": "firebase serve --only functions --port 5001"
+    "serve": "firebase serve --only functions --port 5001",
+    "serve:build": "serve -s build"
   },
   "proxy": "http://localhost:5001/todoapp-4f92c/us-central1",
   "eslintConfig": {
