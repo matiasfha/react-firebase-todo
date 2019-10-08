@@ -4,7 +4,7 @@ const cors = require("cors");
 const Multer = require("multer");
 const fileMiddleware = require("express-multipart-file-parser");
 const admin = require("firebase-admin");
-const serviceAccount = require("../.todoapp-service-account.json");
+const serviceAccount = require("../todoapp-service-account.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -25,19 +25,9 @@ app
   .use(bodyParser.urlencoded({ extended: false }))
   .use(fileMiddleware);
 
-const getTodosBySearch = async (req, res) => {
-  const docRef = firestore.collection("todos");
-  const [search, value] = req.query;
-  docRef.where("description");
-};
-
 // Routes
 const getTodos = async (req, res) => {
   const docRef = firestore.collection("todos");
-  if (req.query.search && req.query.value) {
-    const [search, value] = req.query;
-    docRef;
-  }
   const param = req.query.todos;
   const getQuery = () => {
     switch (param) {
